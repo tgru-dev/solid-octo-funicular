@@ -23,7 +23,7 @@ tagline: The coolest app ever
 # This is the icon displayed in the App Store as well as on the home screen.
 # The icon is only needed for community App Stores. For the official Umbrel App Store, the icon will be uploaded via the Pull Request and stored
 # in a separate repostiory (https://github.com/getumbrel/umbrel-apps-gallery).
-icon: https://raw.githubusercontent.com/<user>/<repo>/main/tgru-pairdrop/icon.svg
+icon: https://raw.githubusercontent.com/schlagmichdoch/PairDrop/master/public/images/logo_blue_512x512.png
 
 # The category should be one of the following: "files", "bitcoin", "media", "networking", "social", "automation", "finance", "ai" or "developer".
 category: files
