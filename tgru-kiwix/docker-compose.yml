@@ -1,0 +1,42 @@
+# The docker compose file is used to start and stop your app's Docker containers.
+version: "3.7"
+
+services:
+  # The app proxy is always needed and tells Umbrel how to route traffic to your app.
+  app_proxy:
+    environment:
+      # For apps in the official app store:
+      # <app-id>_<web-container-name>_1
+      # e.g. 'btc-rpc-explorer_web_1'
+      # For apps in the community app store:
+      # <app-store-id>-<app-id>_<web-container-name>_1
+      # e.g. 'sparkles-btc-rpc-explorer_web_1'
+      # Note that the '_1' at the end is needed
+      APP_HOST: tgru-kiwix_web_1
+      # The port your app's web server is listening on
+      # Note: This does not need to be the same port as in the umbrel-app.yml
+      # This port is only accessible from within the Docker network
+      APP_PORT: 2109
+      # If you want to disable the app proxy, you can set this to 'false'
+      # Disabling the app proxy will make your app accessible without the Umbrel authentication
+      #PROXY_AUTH_ADD: "true"
+      # If you only want to allow public access to some parts of the app, you can use white/blacklists Here
+      #PROXY_AUTH_WHITELIST: "*"
+      #PROXY_AUTH_BLACKLIST: "/admin/*"
+  
+  web:
+    # Note: always use the image digest to ensure reproducability across installations
+    image:image: kiwix/kiwix-serve
+    # Reducing the ownership/permissions to the umbrel user would be ideal from an app sandbox point of view.
+    # But it might not be possible for all apps to run as a non-root user!
+    #user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+
+  kiwix:
+    
+    ports:
+      - '8888:80'
+    volumes:
+      - "./data/zim:/data"
+ 
