@@ -15,7 +15,7 @@ id: tgru-RaspAP
 #disabled: false
 
 # This is the name of your App. It will show up in the App Store as well as on the home screen of Umbrel.
-name: My Cool App
+name: RaspAP
 
 # The tagline should describe your app in one sentence. Do not use more than 100 characters.
 tagline: The coolest app ever
