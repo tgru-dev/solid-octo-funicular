@@ -16,7 +16,7 @@ services:
       # The port your app's web server is listening on
       # Note: This does not need to be the same port as in the umbrel-app.yml
       # This port is only accessible from within the Docker network
-      APP_PORT: 570
+      APP_PORT: 5702
       # If you want to disable the app proxy, you can set this to 'false'
       # Disabling the app proxy will make your app accessible without the Umbrel authentication
       #PROXY_AUTH_ADD: "true"

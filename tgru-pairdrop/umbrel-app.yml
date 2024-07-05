@@ -15,7 +15,7 @@ id: tgru-pairdrop
 #disabled: false
 
 # This is the name of your App. It will show up in the App Store as well as on the home screen of Umbrel.
-name: My Cool App
+name: Pairdrop
 
 # The tagline should describe your app in one sentence. Do not use more than 100 characters.
 tagline: The coolest app ever
@@ -35,7 +35,7 @@ version: "1.0.0"
 # The port your app is reachable from a webbrowser. This should be a number between 1024 and 65535.
 # Note: This port does not need to be the same as the APP_PORT in the docker-compose.yml.
 # This port will be exposed to the user.
-port: 3000
+port: 3483
 
 # A description of your app. This will be shown in the App Store.
 # Note: To separate paragraphs, use two empty lines instead of only one.

@@ -35,7 +35,7 @@ version: "1.0.0"
 # The port your app is reachable from a webbrowser. This should be a number between 1024 and 65535.
 # Note: This port does not need to be the same as the APP_PORT in the docker-compose.yml.
 # This port will be exposed to the user.
-port: 3000
+port: 3482
 
 # A description of your app. This will be shown in the App Store.
 # Note: To separate paragraphs, use two empty lines instead of only one.

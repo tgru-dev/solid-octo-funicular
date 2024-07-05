@@ -23,7 +23,7 @@ tagline: The coolest app ever
 # This is the icon displayed in the App Store as well as on the home screen.
 # The icon is only needed for community App Stores. For the official Umbrel App Store, the icon will be uploaded via the Pull Request and stored
 # in a separate repostiory (https://github.com/getumbrel/umbrel-apps-gallery).
-icon: https://avatars.githubusercontent.com/u/78154814?s=280&v=4
+icon: https://raw.githubusercontent.com/<user>/<repo>/main/tgru-RaspAP/icon.svg
 
 # The category should be one of the following: "files", "bitcoin", "media", "networking", "social", "automation", "finance", "ai" or "developer".
 category: files
@@ -35,7 +35,7 @@ version: "1.0.0"
 # The port your app is reachable from a webbrowser. This should be a number between 1024 and 65535.
 # Note: This port does not need to be the same as the APP_PORT in the docker-compose.yml.
 # This port will be exposed to the user.
-port: 3244
+port: 3481
 
 # A description of your app. This will be shown in the App Store.
 # Note: To separate paragraphs, use two empty lines instead of only one.
