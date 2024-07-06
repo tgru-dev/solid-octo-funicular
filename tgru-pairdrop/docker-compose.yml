@@ -24,7 +24,7 @@ services:
       #PROXY_AUTH_WHITELIST: "*"
       #PROXY_AUTH_BLACKLIST: "/admin/*"
   
-  web:
+  server::
     # Note: always use the image digest to ensure reproducability across installations
     image: "lscr.io/linuxserver/pairdrop:latest"
     # Reducing the ownership/permissions to the umbrel user would be ideal from an app sandbox point of view.
@@ -33,8 +33,7 @@ services:
     restart: on-failure
     stop_grace_period: 1m
 
-  pairdrop:
-        environment:
+    environment:
             - PUID=1000 # UID to run the application as
             - PGID=1000 # GID to run the application as
             - WS_FALLBACK=false # Set to true to enable websocket fallback if the peer to peer WebRTC connection is not available to the client.
