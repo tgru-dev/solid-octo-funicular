@@ -16,7 +16,7 @@ services:
       # The port your app's web server is listening on
       # Note: This does not need to be the same port as in the umbrel-app.yml
       # This port is only accessible from within the Docker network
-      APP_PORT: 3000
+      APP_PORT: 9000
     
 
   server:
@@ -31,4 +31,4 @@ services:
       - DEBUG_MODE=false # Set to true to debug container and peer connections.
       - TZ=Etc/UTC # Time Zone
     ports:
-      - "127.0.0.1:3000:3000" # Web UI. Change the port number before the last colon e.g. `127.0.0.1:9000:3000`
+      - "127.0.0.1:9000:3000" # Web UI. Change the port number before the last colon e.g. `127.0.0.1:9000:3000`
